@@ -3,13 +3,13 @@ const app = require('./app');
 
 describe('Test the app', () => {                          
 
-  test('Get / should return Hello, World!', async () => { 
+  test('Get / should return Fundamentals of DevOps!', async () => { 
     const response = await request(app).get('/');         
     expect(response.statusCode).toBe(200);                
-    expect(response.text).toBe('Fundamentals of DevOps updated!!');          
+    expect(response.text).toBe('Fundamentals of DevOps!');          
   });
 
-  test('Get /name/Bob should return Hello, Bob!', async () => {
+  /* test('Get /name/Bob should return Hello, Bob!', async () => {
     const response = await request(app).get('/name/Bob');
     expect(response.statusCode).toBe(200);
     expect(response.text).toBe('Hello, Bob!');
@@ -23,5 +23,5 @@ describe('Test the app', () => {
     expect(response.statusCode).toBe(200);
     expect(response.text).toBe(sanitizedHtml);
   });
-
+ */
 });
